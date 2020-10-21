@@ -26,4 +26,4 @@ ARG DEPENDENCY=/src/application/target/dependency
 COPY --from=springboot-build ${DEPENDENCY}/BOOT-INF/lib /app/lib
 COPY --from=springboot-build ${DEPENDENCY}/META-INF /app/META-INF
 COPY --from=springboot-build ${DEPENDENCY}/BOOT-INF/classes /app
-ENTRYPOINT ["java","-cp","app:app/lib/*","com.example.employeeservicespringboot.restfulwebservices.EmployeeServiceSpringbootApplication"]
+ENTRYPOINT ["java","-cp","app:app/lib/*","com.example.employeeservicespringboot.EmployeeServiceSpringbootApplication"]
